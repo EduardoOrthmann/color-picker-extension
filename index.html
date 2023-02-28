@@ -4,45 +4,23 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Picker</title>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
   <body>
     <main class="app">
       <div class="app__color-picker">
-        <button id="color-picker" class="color-picker__button">Pick Color</button>
+        <button id="color-picker" class="color-picker__button">
+          Pick Color
+        </button>
       </div>
-      <div class="app__picked-colors">
+      <div id="picked-colors" class="app__picked-colors hidden">
         <header class="picked-colors__header">
           <p class="picked-colors__title">Picked colors</p>
-          <span class="picked-colors__clear-all">Clear All</span>
+          <span id="clear-all" class="picked-colors__clear-all">Clear All</span>
         </header>
-        <ul id="all-colors" class="picked-colors__all-colors">
-          <li class="all-colors__color">
-            <span class="color__picked-color"></span>
-            <span class="color__color-name">#5372f0</span>
-          </li>
-          <li class="all-colors__color">
-            <span class="color__picked-color"></span>
-            <span class="color__color-name">#5372f0</span>
-          </li>
-          <li class="all-colors__color">
-            <span class="color__picked-color"></span>
-            <span class="color__color-name">#5372f0</span>
-          </li>
-          <li class="all-colors__color">
-            <span class="color__picked-color"></span>
-            <span class="color__color-name">#5372f0</span>
-          </li>
-          <li class="all-colors__color">
-            <span class="color__picked-color"></span>
-            <span class="color__color-name">#5372f0</span>
-          </li>
-          <li class="all-colors__color">
-            <span class="color__picked-color"></span>
-            <span class="color__color-name">#5372f0</span>
-          </li>
-        </ul>
+        <ul id="all-colors" class="picked-colors__all-colors"></ul>
       </div>
     </main>
   </body>

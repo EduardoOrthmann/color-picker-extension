@@ -24,12 +24,19 @@ body {
   background: #fff;
 }
 
-.app :where(.app__color-picker, .picked-colors__header, .picked-colors__all-colors, .all-colors__color) {
+.app
+  :where(
+    .app__color-picker,
+    .picked-colors__header,
+    .picked-colors__all-colors,
+    .all-colors__color
+  ) {
   display: flex;
   align-items: center;
 }
 
 .app__color-picker {
+  border-radius: var(--border-radius);
   padding: 30px 0;
   justify-content: center;
   background-color: var(--background-color);
@@ -45,14 +52,27 @@ body {
   padding: 10px 20px;
   border-radius: var(--border-radius);
   cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.color-picker__button:hover {
+  background: #2c52ed;
 }
 
 .app__picked-colors {
   padding: 10px 15px;
 }
 
+.app__picked-colors.hidden {
+  display: none;
+}
+
 .picked-colors__header {
   justify-content: space-between;
+}
+
+.picked-colors__title {
+  font-size: 1.05rem;
 }
 
 .picked-colors__clear-all {
@@ -61,21 +81,26 @@ body {
   font-size: 0.9rem;
 }
 
+.picked-colors__clear-all:hover {
+  color: #143feb;
+}
+
 .picked-colors__all-colors {
   padding: 10px 0;
   flex-wrap: wrap;
-  gap: 8px;
 }
 
 .all-colors__color {
+  width: calc(100% / 3);
+  margin-bottom: 10px;
   gap: 8px;
   cursor: pointer;
 }
 
 .color__picked-color {
   display: block;
-  height: 22px;
-  width: 22px;
+  height: 21px;
+  width: 21px;
   border-radius: var(--border-radius);
   background-color: var(--primary-color);
 }
