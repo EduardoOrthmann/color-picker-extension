@@ -13,12 +13,6 @@
   font-family: 'Poppins', sans-serif;
 }
 
-body {
-  display: grid;
-  place-items: center;
-  min-height: 100vh;
-}
-
 .app {
   width: 350px;
   background: #fff;
